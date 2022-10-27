@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <script>
+
+        function vizsgal() {        
+            let a = Number(document.forms["urlap"]["beszam"].value);
+            if (a % 2 == 0)
+            {
+                document.getElementById('paritas').innerHTML = 'Páros';
+            }
+            else
+            {
+                document.getElementById('paritas').innerHTML = 'Páratlan';
+            }
+        }
+    </script>
+    <h2>Számvizsgálat</h2>
+    <form name="urlap">
+        <input type="text" name="beszam">
+        <input type="button" value="Számvizsgálat" onclick="vizsgal()">
+    </form>
+    <p>Paritás: <span id="paritas">?</span></p>
+</body>
+
+</html>
